@@ -25,7 +25,7 @@ class _CryptoListState extends State<CryptoList> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Crypto Coin List"),
+        title: const Text("Crypto Coin List"),
       ),
       body: (_cryptoCoinsList == null)
           ? const Center(
