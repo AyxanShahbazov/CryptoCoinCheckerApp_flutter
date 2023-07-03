@@ -1,5 +1,14 @@
 import 'package:dio/dio.dart';
+import 'package:get_it/get_it.dart';
 import 'crypto_coins.dart';
+
+class Crypto {
+  static void configureDependencies() {
+    final dio = Dio();
+    GetIt.I.registerSingleton<AbstractCoinsRepository>(
+        CryptoCoinsRepository(dio: dio));
+  }
+}
 
 class CryptoCoinsRepository implements AbstractCoinsRepository {
   CryptoCoinsRepository({
